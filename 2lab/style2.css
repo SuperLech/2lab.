@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    background-color: rgb(94, 221, 43);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 50px auto;
+}
+
+label, input, select, textarea {
+    display: block;
+    margin-bottom: 20px;
+    color: black;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #b92121;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*цвет кнопки"Отправить"*/
+input[type="submit"]:hover {
+    background-color: #0d6b05;
+}
+
+
+/* Скрываем дефолтные радиокнопки */
+input[type="radio"] {
+    display: none;
+}
+
+/* Создаем стилизованные радиокнопки */
+input[type="radio"] + label {
+    position: relative;
+    padding-left: 30px; /* Расстояние между радиокнопкой и текстом */
+    cursor: pointer;
+}
+
+input[type="radio"] + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px; 
+    height: 20px; 
+    border: 2px solid rgb(219, 6, 6); 
+    border-radius: 50%; 
+}
+
+/* Когда радиокнопка выбрана, меняем фон кастомной радиокнопки */
+input[type="radio"]:checked + label:before {
+    background-color: blue; 
+}
+input[type="checkbox"] {
+    display: none; 
+}
+
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #c84e16;
+    background-color: white;
+    border-radius: 3px;
+}
+
+input[type="checkbox"]:checked + label:before {
+    background-color:blue;
+    border: 2px solid rgb(223, 75, 17);
+}
